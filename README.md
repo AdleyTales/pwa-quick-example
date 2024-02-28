@@ -4,3 +4,15 @@
 
 也可以使用自签名https证书
 
+
+## Usage
+
+```
+npm install
+
+node app.js
+
+// or
+
+node app.https.js
+```
