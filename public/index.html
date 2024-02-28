@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My PWA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <h1>Hello PWA! v8 ~</h1>
+
+  <button id="btn">点击</button>
+  <div id="data"></div>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('btn').onclick = async function() {
+      const res = await fetch('http://127.0.0.1:9090/api/getData')
+      const data = await res.json()
+      document.getElementById('data').innerText = JSON.stringify(data)
+    }
+  </script>
+</body>
+</html>
